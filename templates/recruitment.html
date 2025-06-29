@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Recruitment - Guild Website{% endblock %}
+
+{% block content %}
+<h1>Recruitment</h1>
+
+<section id="open-spots">
+    <h2>Open Recruitment Spots</h2>
+    <ul>
+        <li><strong>Warrior:</strong> DPS (High Demand)</li>
+        <li><strong>Priest:</strong> Healer (Medium Demand)</li>
+        <li><strong>Mage:</strong> DPS (Low Demand)</li>
+        <li><strong>Rogue:</strong> DPS (Medium Demand)</li>
+        <li><strong>Warlock:</strong> DPS (High Demand)</li>
+        <li><strong>Druid:</strong> Healer/Tank (Medium Demand)</li>
+        <li><strong>Hunter:</strong> DPS (Low Demand)</li>
+        <li><strong>Paladin:</strong> Healer/Tank (Holy/Prot - High Demand)</li>
+        <li><strong>Shaman:</strong> Healer/DPS (Resto/Ele - Medium Demand)</li>
+    </ul>
+</section>
+
+<section id="application-form">
+    <h2>Recruitment Application Form</h2>
+    <form action="#" method="POST">
+        <div>
+            <label for="char-name">Character Name:</label>
+            <input type="text" id="char-name" name="char-name" required>
+        </div>
+        <div>
+            <label for="char-class">Class:</label>
+            <select id="char-class" name="char-class" required>
+                <option value="">--Please choose an option--</option>
+                <option value="warrior">Warrior</option>
+                <option value="paladin">Paladin</option>
+                <option value="hunter">Hunter</option>
+                <option value="rogue">Rogue</option>
+                <option value="priest">Priest</option>
+                <option value="shaman">Shaman</option>
+                <option value="mage">Mage</option>
+                <option value="warlock">Warlock</option>
+                <option value="druid">Druid</option>
+            </select>
+        </div>
+        <div>
+            <label for="char-level">Level:</label>
+            <input type="number" id="char-level" name="char-level" min="1" max="60" required>
+        </div>
+        <div>
+            <label for="char-spec">Primary Specialization/Role:</label>
+            <input type="text" id="char-spec" name="char-spec" required>
+        </div>
+        <div>
+            <label for="raid-experience">Raid Experience:</label>
+            <textarea id="raid-experience" name="raid-experience" rows="5" required></textarea>
+        </div>
+        <div>
+            <label for="discord-username">Discord Username (e.g., user#1234):</label>
+            <input type="text" id="discord-username" name="discord-username" required>
+        </div>
+        <div>
+            <label for="why-join">Why do you want to join us?</label>
+            <textarea id="why-join" name="why-join" rows="5" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit Application (Currently Non-Functional)</button>
+        </div>
+    </form>
+</section>
+{% endblock %}
